@@ -2,4 +2,9 @@
 <resources>
     <string name="app_name">Camping administrator</string>
     <string name="hello_world">Hello BTS SIO Lycée Chevrollier - ANGERS!</string>
+    <string name="nomClient">Name</string>
+    <string name="prenomClient">Surname</string>
+    <string name="dateNaissClient">Date of birth</string>
+    <string name="numPortableClient">Cell phone</string>
+    <string name="titreClient">Add customer</string>
 </resources>

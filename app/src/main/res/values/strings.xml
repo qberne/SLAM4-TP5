@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Gestion du Camping</string>
     <string name="hello_world">Bienvenue aux BTS SIO Lycée Chevrollier - ANGERS!</string>
+    <string name="titreClient">Ajout d\'un client</string>
+    <string name="nomClient">Nom</string>
+    <string name="prenomClient">Prenom</string>
+    <string name="dateNaissClient">Date de naissance</string>
+    <string name="numPortableClient">Numéro de portable</string>
 </resources>
