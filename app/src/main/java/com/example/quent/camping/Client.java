@@ -28,7 +28,7 @@ public class Client {
         numPortable = numP;
     }
 
-
+    public Client(){}
 
     public long getId() { /*retourne l'id du client ajouté automatiquement*/
         return id;

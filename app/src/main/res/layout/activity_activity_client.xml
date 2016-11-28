@@ -9,57 +9,113 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.quent.camping.ActivityClient">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/nomClient"
-        android:hint="@string/nomClient"
-        android:layout_marginTop="47dp"
-        android:layout_below="@+id/titreClient"
-        android:layout_alignStart="@+id/prenomClient" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/prenomClient"
-        android:layout_below="@+id/nomClient"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:hint="@string/prenomClient" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titreClient"
-        android:id="@+id/titreClient"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:textSize="20sp" />
+        android:layout_alignParentStart="true">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/dateNaissClient"
-        android:layout_marginTop="48dp"
-        android:layout_below="@+id/prenomClient"
-        android:layout_alignStart="@+id/prenomClient"
-        android:hint="@string/dateNaissClient" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/numPortableClient"
-        android:layout_below="@+id/dateNaissClient"
-        android:layout_alignStart="@+id/dateNaissClient"
-        android:layout_marginTop="40dp"
-        android:hint="@string/numPortableClient" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titreClient"
+                android:id="@+id/textViewTitreClient"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="40dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextNomClient"
+                android:hint="@string/nomClient"
+                android:width="250dp"
+                android:layout_below="@+id/textViewTitreClient"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextPrenomClient"
+                android:hint="@string/prenomClient"
+                android:width="250dp"
+                android:layout_below="@+id/editTextNomClient"
+                android:layout_alignStart="@+id/editTextNomClient"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/editTextDateNaissClient"
+                android:hint="@string/dateNaissClient"
+                android:width="250dp"
+                android:layout_below="@+id/editTextPrenomClient"
+                android:layout_alignStart="@+id/editTextPrenomClient"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datePickerDateNaiss" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/editTextNumPortableClient"
+                android:hint="@string/numPortableClient"
+                android:width="250dp"
+                android:layout_below="@+id/editTextDateNaissClient"
+                android:layout_alignStart="@+id/editTextDateNaissClient"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buttonReset"
+                    android:id="@+id/buttonEffacer"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/buttonEnregistrer"
+                    android:layout_alignEnd="@+id/editTextNumPortableClient"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buttonEnregistrer"
+                    android:id="@+id/buttonEnregistrer"
+                    android:width="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

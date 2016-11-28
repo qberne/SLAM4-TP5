@@ -7,4 +7,6 @@
     <string name="dateNaissClient">Date of birth</string>
     <string name="numPortableClient">Cell phone</string>
     <string name="titreClient">Add customer</string>
+    <string name="buttonEnregistrer">Save</string>
+    <string name="buttonReset">Reset</string>
 </resources>
