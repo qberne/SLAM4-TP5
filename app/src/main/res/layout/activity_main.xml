@@ -26,11 +26,17 @@
             android:src="@drawable/campingsablesblancs" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button"
+            android:text="@string/buttonAjouterClient"
+            android:id="@+id/buttonAjouterClient"
             android:nestedScrollingEnabled="false" />
+
+        <Button
+            android:text="@string/buttonListeClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonListeClient" />
 
     </LinearLayout>
 </RelativeLayout>

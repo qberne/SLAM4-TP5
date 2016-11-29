@@ -9,4 +9,6 @@
     <string name="titreClient">Add customer</string>
     <string name="buttonEnregistrer">Save</string>
     <string name="buttonReset">Reset</string>
+    <string name="buttonAjouterClient" >Add a customer</string>
+    <string name="buttonListeClient">Customer\'s list</string>
 </resources>

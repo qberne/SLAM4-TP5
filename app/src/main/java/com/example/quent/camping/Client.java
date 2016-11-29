@@ -5,10 +5,11 @@ package com.example.quent.camping;/*
  */
 
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Client {
+public class Client implements Serializable {
 
     private long id;
     private String nom;
@@ -65,6 +66,7 @@ public class Client {
         this.numPortable = numPortable;
     }
 
+    @Override
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         StringBuilder caract = new StringBuilder("\n");

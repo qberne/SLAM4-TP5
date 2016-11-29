@@ -1,5 +1,6 @@
 package com.example.quent.camping;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,12 +9,15 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 public class ActivityClient extends AppCompatActivity {
+
+    private Camping unCamping;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,9 @@ public class ActivityClient extends AppCompatActivity {
         btnEnregistrer.setOnClickListener(btnclick);
         btnEffacer.setOnClickListener(btnclick);
         datePickerDateNaiss.init(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH), calendarclick);
+
+        unCamping = (Camping) getIntent().getSerializableExtra("campingCree");
+
     }
 
     private void clearEditText(){
@@ -63,9 +70,19 @@ public class ActivityClient extends AppCompatActivity {
 
                     c.setNumPortable(((EditText)findViewById(R.id.editTextNumPortableClient)).getText().toString());
 
-                    Toast.makeText(getApplicationContext(), c.toString(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), c.toString(), Toast.LENGTH_SHORT).show();
+
+                    unCamping.addClient(c);
+
+                    Toast.makeText(getApplicationContext(), unCamping.toString(), Toast.LENGTH_SHORT).show();
 
                     clearEditText();
+
+                    Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                    i.putExtra("campingRenvoye", (Serializable)unCamping);
+                    setResult(100, i);
+
+                    finish();
 
                     break;
                 case R.id.buttonEffacer:

@@ -68,7 +68,11 @@
                 android:layout_below="@+id/editTextPrenomClient"
                 android:layout_alignStart="@+id/editTextPrenomClient"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
 
             <DatePicker
                 android:layout_width="match_parent"
