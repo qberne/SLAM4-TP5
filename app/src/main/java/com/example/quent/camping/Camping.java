@@ -18,6 +18,8 @@ public class Camping implements Serializable {
         listClient.add(c);
     }
 
+    public ArrayList<Client> getListClient(){ return listClient; }
+
     @Override
     public String toString() {
         StringBuilder caract = new StringBuilder("\n");

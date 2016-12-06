@@ -3,6 +3,7 @@ package com.example.quent.camping;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -34,12 +35,15 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.buttonAjouterClient:
-                    i = new Intent(getApplicationContext(),ActivityClient.class);
+                    i = new Intent(getApplicationContext(),ClientActivity.class);
                     i.putExtra("campingCree", (Serializable)unCamping);
                     startActivityForResult(i,1);
                     break;
                 case R.id.buttonListeClient:
-                    Toast.makeText(getApplicationContext(), unCamping.toString(), Toast.LENGTH_SHORT).show();
+                    Log.i("dans MainActivity : ", "Appel de l'activité LISTEclient");
+                    Intent i2 = new Intent(getApplicationContext(), ListeClientActivity.class);
+                    i2.putExtra("leCamping", (Serializable) unCamping);
+                    startActivityForResult(i2, 2);
                     break;
             }
         }

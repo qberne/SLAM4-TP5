@@ -11,4 +11,5 @@
     <string name="buttonReset">Reset</string>
     <string name="buttonAjouterClient" >Add a customer</string>
     <string name="buttonListeClient">Customer\'s list</string>
+    <string name="buttonModifier">Edit changes</string>
 </resources>

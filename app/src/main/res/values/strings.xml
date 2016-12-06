@@ -8,6 +8,7 @@
     <string name="numPortableClient">Numéro de portable</string>
     <string name="buttonEnregistrer">Enregistrer</string>
     <string name="buttonReset">Effacer</string>
-    <string name="buttonAjouterClient" >Ajouter un client</string>
-    <string name="buttonListeClient" >Liste des clients</string>
+    <string name="buttonAjouterClient">Ajouter un client</string>
+    <string name="buttonListeClient">Liste des clients</string>
+    <string name="buttonModifier" >Modifier</string>
 </resources>
